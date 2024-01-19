@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  BOOTSTRAP_SERVERS: my-release-kafka-controller-0.my-release-kafka-controller-headless.kafka-2.svc.cluster.local:9092,my-release-kafka-controller-1.my-release-kafka-controller-headless.kafka-2.svc.cluster.local:9092,my-release-kafka-controller-2.my-release-kafka-controller-headless.kafka-2.svc.cluster.local:9092
+  PARTITIONS: "4"
+  REPLICAS: "2"
+  TOPIC_NAME: new-topic
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: kafka-settings
+  namespace: kafka-2
